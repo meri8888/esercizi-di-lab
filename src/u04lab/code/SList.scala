@@ -112,7 +112,6 @@ object Test extends App {
   println(l get 2) // 30
   println(of("a",10)) // a,a,a,..,a
   println(l filter (_<=20) map ("a"+_) ) // a10, a20
-  println(for (i <- l; if (i <= 20)) yield "a"+i) //a10,a20
   // The code below raises a scala.NotImplementedError until you implement flatMap and zipRight
   println(l flatMap(i => i+"a" :: i+"b" :: Nil()) toSeq) // List(10a, 10b, 20a, 20b, 30a, 30b, 40a, 40b)
   println(l flatMap(i => i+1 :: Nil()) toSeq) // List(11, 21, 31, 41)
